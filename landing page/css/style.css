@@ -5,8 +5,6 @@
   margin: 0;
 }
 
-.intro-text
-
 .m-f{
   font-family: 'Aclonica', sans-serif;
   text-transform: uppercase;
@@ -16,7 +14,6 @@ body{
   background-image: url(../images/back-img.jpg);
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -44,7 +41,7 @@ main{
 }
 
 .header-content h1, .intro-content h1, .contact-section h1{
-  font-size: calc(30px+3em);
+  font-size: 42px;
 }
 
 .header-content h2 span{
@@ -54,7 +51,6 @@ main{
 
 .btn{
   background-color: transparent;
-  width: 100%;
   border: 3px solid #ffffff;
   padding: 15px 35px;
   font-weight: bolder;
@@ -66,7 +62,7 @@ main{
 
 .btn-fill{
   background-color: #ffffff;
-  color: #333;
+  color: #000000;
 }
 
 .btn-fill:hover{
@@ -81,9 +77,9 @@ main{
 }
 
 .intro{
-  height: fit-content;
   background-color: #ffffff;
-  padding: 15vh 0 55vh 0;
+  height: 100vh;
+  padding: 10vh 0 55vh 0;
 }
 
 .intro-content{
@@ -105,8 +101,8 @@ main{
 .services{
   background-color: #f1c11a;
   height: auto;
-  clip-path: polygon(0 0, 15% 0, 50% 20%, 85% 0, 100% 0, 100% 100%, 0 100%, 0 0);
-  margin-top: -25vh;
+  clip-path: polygon(0 0, 15% 0, 50%  10%, 85% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  margin-top: -15vh;
 }
 
 .service-content{
@@ -128,24 +124,22 @@ main{
 
 .contact{
   background-color: #ffffff;
-  padding: 10vh 0 20vh 0;
+  padding: 10vh 0;
   text-align: center;
 }
 
 input[type='text'], input[type=email], textarea{
   width: 100%;
-  padding: 10px 12px;
+  padding: 12px;
   border-color: 1px solid #cccccc;
-  margin: 0;
 }
 
 .contact-section div{
-  padding: 0.5em 0;
+  padding: 10px 3%;
 }
 
 .btn-submit{
-  width: 100%;
-  background-color: #333333;
+  background-color: #000000;
   color: #ffffff;
 }
 
@@ -164,11 +158,19 @@ footer{
   padding-bottom: 30px;
 }
 
-@media screen and (max-width: 560px){
-  .header-content h2{
-    font-size: 15px;
+@media screen and (max-width: 768px){
+  .header-content {
+    padding:5vh;
+    text-align: center;
+    margin-top: 20vh;
+    width: 90%;
   }
 
+  .header-content h2{
+    font-size: 20px;
+  }
+
+  
   .intro-content{
     display: block;
     height: 90vh;
@@ -179,7 +181,7 @@ footer{
   }
 
   .services{
-    height: 100vh;
+    height: 150vh;
     clip-path: polygon(0 0, 15% 0, 50% 5%, 85% 0, 100% 0, 100% 100%, 0 100%, 0 0);
   }
 
@@ -195,39 +197,81 @@ footer{
   }
 }
 
-@media screen and (max-width: 768px){
-  .header-content{
-    padding: 20vh 0;
-    /* line-height: 1.5; */
-  }
-  .header-content h2{
-    /* padding: -2em; */
-    margin: 0;
-    font-size: 20px;
-  }
-
-  .intro-content{
-    display: block;
-    height: 90vh;
-  }
-
-  .intro-content div{
-    width: 100%;
-  }
-
-  .services{
+@media screen and (max-width: 580px){
+  .header{
     height: 100vh;
+    color: #ffffff;
+  }
+  .header-content{ 
+    width: 100%;
+    text-align: center;
+  }
+  .services{
+    height: 170vh;
     clip-path: polygon(0 0, 15% 0, 50% 5%, 85% 0, 100% 0, 100% 100%, 0 100%, 0 0);
   }
+}
 
-  .service-content{
-    display: block;
-    margin-top: -15vh;
-    padding-top: 1px;
+@media screen and (max-width: 530px){
+  .header{
+    height: 100vh;
+    color: #ffffff;
   }
-
-  .bucket{
+  .header-content{ 
     width: 100%;
-    margin: 80px 3%;
+    text-align: center;
+  }
+  .services{
+    height: 170vh;
+    clip-path: polygon(0 0, 15% 0, 50% 5%, 85% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+  .btn{
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    padding: 10px 25px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 15px;
+    transition: all 400ms ease-in-out;
+  }
+  .btn-fill:hover{
+    background-color: #f1c11a;
+    border-color: transparent;
+  }
+  
+  .btn-trans:hover{
+    background-color: #f1c11a;
+    color: #000000;
+    border-color: transparent;
+  }
+  .btn-fill{
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .btn-submit{
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 475px){
+  .header{
+    height: 100vh;
+    color: #ffffff;
+  }
+  .header-content{ 
+    width: 100%;
+    text-align: center;
+  }
+  .btn-div{
+    float: left;
+  }
+  .intro{
+    height: 125vh;
+  }
+  .services{
+    height: 195vh;
+    clip-path: polygon(0 0, 15% 0, 50% 5%, 85% 0, 100% 0, 100% 100%, 0 100%, 0 0);
   }
 }
