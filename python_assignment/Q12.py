@@ -14,6 +14,7 @@ def change_cases(arg):
 
 
 if __name__ == '__main__':
-    output_list = change_cases('apple')
+    input_word = input().strip()
+    output_list = change_cases(input_word)
     for _ in output_list:
         print(_)
