@@ -6,7 +6,7 @@ def sum_of_items(arg):
     :param arg: list of numbers
     :return: sum:number
     '''
-    sum = 0
+    sum =0
     for _ in arg:
         sum += _
     return sum
