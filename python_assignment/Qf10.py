@@ -7,9 +7,10 @@ def print_even_prime(arg):
     :return: list
     '''
     new_arg = []
-    for i in range(0, len(arg), 2):
-        new_arg.append(arg[i])
+    for _ in arg:
+        if _ % 2 == 0:
+            new_arg.append(_)
     return new_arg
 
 if __name__ == "__main__":
-    print(print_even_prime([1,2,3,4,5,6]))
+    print(print_even_prime([1,3, 4,41, 80, 22, 10, 7]))
