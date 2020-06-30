@@ -1,54 +1,14 @@
-# Write code that will print out the anagrams (words that use the same
-# letters) from a paragraph of text.
+# Create a list. Append the names of your colleagues and friends to it.
+# Has the id of the list changed? Sort the list. What is the first item on
+# the list? What is the second item on the list?
 
-def is_anagram(st1, st2):
-    '''
-    checks whether given two words are anagram or not
-    :param st1: String
-    :param st2: String
-    :return: Boolean
-    '''
-    if len(st1) != len(st2):
-        return False
-    else:
-        st1_list =[]
-        for _ in st1:
-            st1_list.append(_)
-
-        for s in st2:
-            if s in st1_list:
-                st1_list.remove(s)
-            else:
-                return False
-    return True
-
-
-
-if __name__ == "__main__":
-    arr = input('Enter a paragraph: ').split()
-    # arr = ["zoo","zooo","zzo","ozo","apple", "aeplp", "pplea", "aple"] # length => 8
-    anagram_words = []
-    for i in range(len(arr)):
-        for j in range(i+1, len(arr)):
-            if is_anagram(arr[i], arr[j]):
-                l = []
-                l.append(arr[i])
-                l.append(arr[j])
-                anagram_words.append(l)
-
-    print('Pair of anagram words found: ',anagram_words)
-
-
-
-# if __name__ == '__main__':
-#     print(is_anagram("zooo", "zoo")) # F
-#     print(is_anagram("zoo", "zooo")) # F
-#     print(is_anagram("zoo", "zzo")) # F
-#     print(is_anagram("zoo", "ozo")) # T
-#     print(is_anagram("zoo", "oZo")) # F
-#     print(is_anagram("zzo", "oZo")) # F
-#     print(is_anagram("zoo", "zzo")) # F
-#     print(is_anagram("zzo", "zoo")) # F
-#     print(is_anagram("zoo", "ooz")) # T
-#     print(is_anagram("zzo", "zoz")) # T
-
+list_of_names = []
+print(f"Empty list has been initialized, has Id: {id(list_of_names)} and value {list_of_names}")
+list_of_names.append('Gaurav')
+list_of_names.append('Elon Musk')
+list_of_names.append('Bill Gates')
+print("Few name were added to the above list.")
+print(f'value: {list_of_names}\nId: {id(list_of_names)}')
+print('Sorting the list...')
+list_of_names.sort()
+print(f'Sorted list has {list_of_names[0]} and {list_of_names[1]} names on first two indices.')
