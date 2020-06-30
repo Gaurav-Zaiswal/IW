@@ -39,3 +39,16 @@ if __name__ == "__main__":
     print('Pair of anagram words found: ',anagram_words)
 
 
+
+# if __name__ == '__main__':
+#     print(is_anagram("zooo", "zoo")) # F
+#     print(is_anagram("zoo", "zooo")) # F
+#     print(is_anagram("zoo", "zzo")) # F
+#     print(is_anagram("zoo", "ozo")) # T
+#     print(is_anagram("zoo", "oZo")) # F
+#     print(is_anagram("zzo", "oZo")) # F
+#     print(is_anagram("zoo", "zzo")) # F
+#     print(is_anagram("zzo", "zoo")) # F
+#     print(is_anagram("zoo", "ooz")) # T
+#     print(is_anagram("zzo", "zoz")) # T
+
