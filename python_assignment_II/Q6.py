@@ -5,5 +5,11 @@ friend_list = ['Ram', 'Jesus', 'Allah', 'Budha']
 
 print('List of names:\n', friend_list)
 print('Searching for John...')
-if not 'John' in friend_list:
+flag = 0
+for name in friend_list:
+    if name == 'John':
+        flag = 1
+        break
+
+if flag == 0:
     print('John not found!')
