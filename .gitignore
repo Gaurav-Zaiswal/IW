@@ -4,3 +4,4 @@
 *.vscode/
 rough.py
 *.csv
+env/

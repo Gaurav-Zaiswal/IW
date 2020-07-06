@@ -5,7 +5,7 @@ def find_sublists(arr):
     list_of_sub_lists = []
     for i in range(len(arr)):
         sub_list = []
-        for j in range(i+1, len(arr)-i):
+        for j in range(i+1, len(arr)-i-1):
             sum_of_two_elements = arr[i] + arr[j]
             if -sum_of_two_elements in arr and -sum_of_two_elements not in sub_list:
                 sub_list.append(arr[i])
