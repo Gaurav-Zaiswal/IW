@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block header %}
+    h5{
+        padding:0;
+        margin:0;
+    }
+
+    img{
+        height: 40vh;
+        width: 100%;
+    }
+{% endblock %}
+
+{% block content %}
+    {% for post in post_list %}
+        <div>
+        <div class="card mx-auto my-2 w-100 col-md-4" style="width: 18rem;">
+          <img class="card-img-top" src="{{ post.thumbnail_img.url }}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'posts:complete_post' post.slug %}">{{ post }}</a></h5>
+              <span class="text-secondary">By {{ post.author.first_name }} {{ post.author.last_name }}</span>
+            <p class="card-text">{{ post.content | safe | slice:":100" }}<span>...</span></p>
+            <a href="#" class="btn btn-primary">fb</a>
+            <a href="#" class="btn btn-primary">instagram</a>
+            <a href="#" class="btn btn-primary">twitter</a>
+          </div>
+        </div>
+        </div>
+    {% endfor %}
+{%endblock%}

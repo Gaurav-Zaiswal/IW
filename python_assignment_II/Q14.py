@@ -14,8 +14,10 @@ def read_csv_dict(file_name):
     with open(input_file_name, mode='r') as csv_file:
         dict_list = []
         csv_reader = csv.DictReader(csv_file)
+        # print(csv_reader)
         line_count = 0
         for row in csv_reader:
+            # print(row)
             # first line of csv_reader has headers so poping it up
             if line_count == 0:
                 line_count += 1
